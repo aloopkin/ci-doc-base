@@ -6,9 +6,9 @@ USER root
 RUN \
   echo "deb http://deb.debian.org/debian bullseye-backports main" >> /etc/apt/sources.list && \
   apt update && \
-  apt install -y npm aspell aspell-en asciidoctor python3 python3-pip curl ca-certificates golang-1.19-go bundler openssl xxd alien && \
-  ln -s /usr/lib/go-1.19/bin/go /usr/bin/go && \
-  ln -s /usr/lib/go-1.19/bin/gofmt /usr/bin/gofmt && \  
+  apt install -y npm aspell aspell-en asciidoctor python3 python3-pip curl ca-certificates golang-1.21-go bundler openssl xxd alien && \
+  ln -s /usr/lib/go-1.21/bin/go /usr/bin/go && \
+  ln -s /usr/lib/go-1.21/bin/gofmt /usr/bin/gofmt && \  
   gem install hexapdf && \
   gem install rouge && \
   gem install asciidoctor-pdf && \
