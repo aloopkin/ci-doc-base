@@ -13,9 +13,9 @@ RUN \
   gem install rouge && \
   gem install asciidoctor-pdf && \
   npm install -g asciidoc-link-check && \
-  pipx install pyspelling && \
-  pipx install lemoncheesecake[junit] && \
-  pipx install lemoncheesecake-requests && \
+  PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin PIPX_MAN_DIR=/usr/local/share/man pipx install --include-deps pyspelling && \
+  PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin PIPX_MAN_DIR=/usr/local/share/man pipx install --include-deps lemoncheesecake[junit] && \
+  PIPX_HOME=/opt/pipx PIPX_BIN_DIR=/usr/local/bin PIPX_MAN_DIR=/usr/local/share/man pipx install --include-deps lemoncheesecake-requests && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
 
