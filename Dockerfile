@@ -6,7 +6,7 @@ USER root
 RUN \
   echo "deb http://deb.debian.org/debian bookworm-backports main" >> /etc/apt/sources.list && \
   apt update && \
-  apt install -y npm aspell aspell-en asciidoctor python3 python3-pip python3-full curl ca-certificates golang-1.21-go bundler openssl xxd alien && \
+  apt install -y npm aspell aspell-en asciidoctor python3 python3-pipx python3-full curl ca-certificates golang-1.21-go bundler openssl xxd alien && \
   ln -s /usr/lib/go-1.21/bin/go /usr/bin/go && \
   ln -s /usr/lib/go-1.21/bin/gofmt /usr/bin/gofmt && \  
   gem install hexapdf && \
